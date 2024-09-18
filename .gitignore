@@ -33,4 +33,6 @@ csv_files/
 *.egg
 *.egg-info/
 dist/
-build/
+build//uploads/
+/csv_files/
+
