@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Resume Parser</title>
+    <style>
+        table.data {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table.data th, table.data td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bulk Resume Parser</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+        <label for="files">Upload Resumes (PDF, DOCX, TXT):</label>
+        <input type="file" id="files" name="files" multiple required><br><br>
+        <button type="submit">Parse Resumes</button>
+    </form>
+    
+    {% if tables %}
+    <h2>Parsed Data</h2>
+    <div>
+        {{ tables|safe }}
+    </div>
+    <br>
+    <a href="/download/{{ csv_file }}">Download CSV</a>
+    {% endif %}
+</body>
+</html>

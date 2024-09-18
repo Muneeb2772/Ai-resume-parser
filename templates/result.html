@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Results</h2>
+        <!-- Display the results table -->
+        <div>
+            {{ tables|safe }}
+        </div>
+        <div class="mt-3">
+            <!-- Link to download the CSV file -->
+            <a href="{{ url_for('download_file', filename=csv_file) }}" class="btn btn-primary">Download CSV</a>
+        </div>
+        <div class="mt-3">
+            <!-- Link to go back to the upload page -->
+            <a href="{{ url_for('index') }}" class="btn btn-secondary">Go Back</a>
+        </div>
+    </div>
+</body>
+</html>
