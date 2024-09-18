@@ -1,0 +1,36 @@
+# Python specific
+*.pyc
+*.pyo
+__pycache__/
+*.pyd
+*.db
+*.sqlite3
+
+# Environment variables
+.env
+
+# Virtual environment
+venv/
+env/
+
+# Logs
+*.log
+
+# PyCharm or other IDEs
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# Flask specific
+instance/
+
+# Uploads folder
+uploads/
+csv_files/
+
+# Distribution and packaging
+*.egg
+*.egg-info/
+dist/
+build/
