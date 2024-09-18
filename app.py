@@ -33,7 +33,7 @@ def extract_text_from_docx(file_path):
 def index():
     return render_template('index.html')
 
-@app.route('/uploads', methods=['POST'])
+@app.route('/upload', methods=['POST'])
 def upload_files():
     os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
     files = request.files.getlist('files')
